@@ -26,7 +26,7 @@ pipeline {
                                 verbose: false,
                                 transfers: [
                                     sshTransfer(
-                                        execCommand: 'cd /home/ansman/ansible && ansible-playbook -i hosts deployment-backend.yml',
+                                        execCommand: 'cd ansible && ansible-playbook -i hosts deployment-backend.yml',
                                         execTimeout: 120000,
                                     )
                                 ]
@@ -51,7 +51,7 @@ pipeline {
                                 verbose: false,
                                 transfers: [
                                     sshTransfer(
-                                        execCommand: 'cd /home/ansman/ansible && ansible-playbook -i hosts stagging-backend.yml',
+                                        execCommand: 'cd ansible && ansible-playbook -i hosts stagging-backend.yml',
                                         execTimeout: 120000,
                                     )
                                 ]
@@ -76,7 +76,7 @@ pipeline {
                                 verbose: false,
                                 transfers: [
                                     sshTransfer(
-                                        execCommand: 'cd /home/ansman/ansible && ansible-playbook -i hosts fullstack-backend.yml',
+                                        execCommand: 'cd ansible && ansible-playbook -i hosts fullstack-backend.yml',
                                         execTimeout: 120000,
                                     )
                                 ]
