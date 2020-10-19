@@ -8,8 +8,6 @@ services:
             - 4321:4321
         networks:
             - deploy
-        depends_on:
-            - postgres
         environment: 
             - PORT=4321
             - REDIS_HOST=18.212.84.32
