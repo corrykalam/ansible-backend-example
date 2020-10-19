@@ -1,0 +1,27 @@
+version: '3.3'
+
+services:
+    backend:
+        image: corrykalam/ansible-backend-example:dev
+        container_name: backend-express
+        ports:
+            - 4321:4321
+        networks:
+            - deploy
+        depends_on:
+            - postgres
+        environment: 
+            - PORT=4321
+            - REDIS_HOST=18.212.84.32
+            - REDIS_PORT=6379
+            - REDIS_PASSWORD=redispass123
+            - DB_HOST=18.212.84.32
+            - DB_USER=postgres
+            - DB_PASSWORD=anjayman123
+            - DB_NAME=newOnlineShop
+            - JWT_KEYS=testpass123  
+
+networks:
+    deploy:
+        driver: bridge
+    
