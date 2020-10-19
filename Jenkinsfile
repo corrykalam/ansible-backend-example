@@ -39,7 +39,7 @@ pipeline {
         stage('Deploy on stagging') {
             when {
                 expression {
-                    params.CICD == 'Deploy Stagging' || BRANCH_NAME == 'prod'
+                    params.CICD == 'Deploy Stagging' || BRANCH_NAME == 'stagging'
                 }
             }
             steps {
